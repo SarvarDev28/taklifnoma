@@ -148,11 +148,10 @@ footer{padding:25px 20px 70px;text-align:center;color:#9f8b62;font:italic 19px '
   <section class="reveal">
     <div class="kicker">Sana</div>
     <h2>Baxtli kunimiz</h2>
-    <p class="hint">✦ Sanani ko‘rish uchun kvadratlarni ishqalang ✦</p>
     <div class="scratch-row">
-      <div class="tile"><div class="val">07<small>KUN</small></div><canvas></canvas></div>
-      <div class="tile"><div class="val">DEKABR<small>OY</small></div><canvas></canvas></div>
-      <div class="tile"><div class="val">2026<small>YIL</small></div><canvas></canvas></div>
+      <div class="tile"><div class="val">07<small>KUN</small></div></div>
+      <div class="tile"><div class="val">DEKABR<small>OY</small></div></div>
+      <div class="tile"><div class="val">2026<small>YIL</small></div></div>
     </div>
     <div class="weekday">DUSHANBA • SOAT 16:00</div>
   </section>
@@ -213,7 +212,6 @@ footer{padding:25px 20px 70px;text-align:center;color:#9f8b62;font:italic 19px '
   <footer>Sh &amp; Sh</footer>
 </main>
 
-<audio id="song" src="yoningdaman.mp3" preload="auto" loop></audio>
 <button class="music" id="musicBtn" type="button"><span>♫</span> MUSIQANI YOQISH</button>
 
 <script>
@@ -260,8 +258,6 @@ function makeScratch(canvas){
  canvas.addEventListener('pointerup',end);
  canvas.addEventListener('pointercancel',end);
 }
-function initScratch(){document.querySelectorAll('.tile canvas').forEach(makeScratch)}
-window.addEventListener('load',initScratch);
 
 /* Scroll reveal */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
@@ -280,18 +276,10 @@ function playNote(){
  noteIndex++;
 }
 const btn=document.getElementById('musicBtn');
-const song=document.getElementById('song');
-let songOk=null; // null = unknown, true = mp3 works, false = use synth fallback
 const ON='<span>♫</span> MUSIQANI O‘CHIRISH',OFF='<span>♫</span> MUSIQANI YOQISH';
 async function toggleMusic(force){
  playing=typeof force==='boolean'?force:!playing;
- if(!playing){song.pause();clearInterval(timer);btn.innerHTML=OFF;return}
- // 1) try the mp3 (yoningdaman.mp3 next to this file)
- if(songOk!==false){
-  try{await song.play();songOk=true;btn.innerHTML=ON;return}
-  catch(e){songOk=false}
- }
- // 2) fallback: soft synthesized tones
+ if(!playing){clearInterval(timer);btn.innerHTML=OFF;return}
  if(!ctx){ctx=new (window.AudioContext||window.webkitAudioContext)();master=ctx.createGain();master.gain.value=.55;master.connect(ctx.destination)}
  if(ctx.state==='suspended')await ctx.resume();
  playNote();clearInterval(timer);timer=setInterval(playNote,650);btn.innerHTML=ON;
