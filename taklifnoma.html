@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="Sizni to'yimizga taklif etamiz — ushbu baxtli kunni biz bilan baham ko'ring.">
+<title>Shahzodbek & Shahnozaxon — To'y taklifnomasi</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap');
+:root{--gold:#d8b66b;--gold2:#f4dfaa;--ink:#080808}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:#080808;color:#f7f0e3;font-family:Montserrat,Arial,sans-serif}
+body.locked{overflow:hidden}
+.page{min-height:100svh;max-width:520px;margin:auto;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 25%,#292016 0,#100e0b 38%,#070707 78%)}
+.page:before,.page:after{content:"";position:absolute;inset:12px;border:1px solid rgba(216,182,107,.35);pointer-events:none;z-index:3}
+.page:after{inset:18px;border-color:rgba(216,182,107,.13)}
+
+/* COVER */
+.cover{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse at 50% 30%,#2a2015 0,#0c0a08 60%,#050505 100%);cursor:pointer;transition:opacity 1s ease,visibility 1s}
+.cover.hide{opacity:0;visibility:hidden;pointer-events:none}
+.cover:before{content:"";position:absolute;inset:14px;border:1px solid rgba(216,182,107,.4)}
+.cover .monogram{margin-bottom:34px}
+.cover .tap{font-size:10px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;animation:blink 2.2s infinite}
+.cover .sub{font:italic 20px 'Cormorant Garamond',serif;color:#e8d9bb;margin-bottom:14px}
+@keyframes blink{50%{opacity:.35}}
+
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:64px 34px 48px;position:relative;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.35)),radial-gradient(ellipse at center,transparent 25%,#050505 100%);z-index:-1}
+.glow{position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(190,139,56,.12);filter:blur(65px);top:22%;left:50%;transform:translateX(-50%);animation:pulse 5s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.45;transform:translateX(-50%) scale(1.18)}}
+.eyebrow{font-size:9px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:28px}
+.monogram{width:92px;height:92px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font:italic 27px 'Cormorant Garamond',serif;white-space:nowrap;margin-bottom:26px;box-shadow:0 0 35px #b98b3b22}
+h1{font:500 clamp(42px,11vw,62px)/.92 'Cormorant Garamond',serif;color:var(--gold2);margin:0;text-shadow:0 2px 22px #d2a34b25}
+.amp{font:italic 32px 'Cormorant Garamond',serif;color:var(--gold);display:block;margin:10px 0}
+.rule{width:90px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:28px auto}
+.invite{font:italic 19px 'Cormorant Garamond',serif;color:#e8d9bb;line-height:1.5;max-width:300px}
+.scroll{position:absolute;bottom:35px;font-size:8px;letter-spacing:3px;color:#a99468;animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(5px);opacity:.6}}
+
+section{padding:64px 32px;text-align:center;position:relative}
+.kicker{font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase}
+h2{font:500 35px 'Cormorant Garamond',serif;color:var(--gold2);margin:12px 0 18px}
+h3{font:500 34px 'Cormorant Garamond',serif;color:var(--gold2);margin:6px 0}
+.copy{font:italic 18px/1.55 'Cormorant Garamond',serif;color:#d7c9ad}
+.star{color:var(--gold);font-size:18px;letter-spacing:12px;margin:15px 0}
+
+/* SCRATCH DATE */
+.hint{font-size:10px;letter-spacing:2px;color:#b9a77e;margin:0 0 22px}
+.scratch-row{display:grid;grid-template-columns:1fr 1.5fr 1.2fr;gap:8px}
+.tile{position:relative;height:104px;border:1px solid #b18a4c88;background:linear-gradient(145deg,#1a1711,#090909);display:grid;place-items:center;overflow:hidden}
+.tile .val{font:500 34px 'Cormorant Garamond',serif;color:var(--gold2);line-height:1;text-align:center}
+.tile .val small{display:block;font:500 8px Montserrat;letter-spacing:3px;color:var(--gold);margin-top:8px}
+.tile canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;transition:opacity .8s}
+.tile canvas.done{opacity:0;pointer-events:none}
+.weekday{margin-top:20px;font-size:11px;letter-spacing:4px;color:var(--gold2)}
+
+/* INVITE */
+.bismillah{font:italic 22px 'Cormorant Garamond',serif;color:var(--gold);margin-bottom:22px}
+.names{margin:26px 0}
+.names .role{font-size:9px;letter-spacing:4px;color:#b9a77e;text-transform:uppercase}
+.names .and{font:italic 26px 'Cormorant Garamond',serif;color:var(--gold);margin:8px 0}
+
+/* PROGRAM */
+.prog{border:1px solid #b18a4c66;padding:22px 20px;background:linear-gradient(145deg,#1a1711,#090909);box-shadow:0 18px 45px #0008;margin-top:24px}
+.prog .row{display:flex;justify-content:center;align-items:baseline;gap:16px}
+.prog .t{font:500 30px 'Cormorant Garamond',serif;color:var(--gold2)}
+.prog .d{font-size:11px;letter-spacing:2px;color:#c9bda5;text-transform:uppercase}
+
+/* COUNTDOWN */
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:28px 0 0}
+.unit{border:1px solid #b18a4c55;padding:13px 4px;background:linear-gradient(145deg,#ffffff08,#00000022)}
+.unit b{font:500 30px 'Cormorant Garamond',serif;color:var(--gold2);display:block}
+.unit span{font-size:8px;letter-spacing:1.5px;color:#b9a77e}
+
+/* VENUE */
+.event-card{border:1px solid #b18a4c66;padding:28px 20px;background:linear-gradient(145deg,#1a1711,#090909);box-shadow:0 18px 45px #0008}
+.event-card .venue{font:500 29px 'Cormorant Garamond',serif;color:var(--gold2);margin:12px 0}
+.event-card p{font-size:11px;line-height:1.8;color:#c9bda5}
+.btn{display:inline-block;margin-top:18px;padding:13px 22px;border:1px solid var(--gold);color:var(--gold2);text-decoration:none;font-size:9px;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.btn:hover{background:var(--gold);color:#111}
+
+.music{position:fixed;right:max(20px,calc((100vw - 480px)/2));bottom:20px;z-index:10;border:1px solid var(--gold);border-radius:30px;background:#111;color:var(--gold2);padding:11px 15px;font:10px Montserrat;letter-spacing:1px;box-shadow:0 4px 20px #0009}
+.music span{display:inline-block;margin-right:6px}
+footer{padding:25px 20px 70px;text-align:center;color:#9f8b62;font:italic 19px 'Cormorant Garamond',serif}
+
+.reveal{opacity:0;transform:translateY(-26px);transition:opacity .85s ease,transform .85s ease}
+.reveal.in{opacity:1;transform:none}
+@media(min-width:600px){body{padding:20px 0}.page{border-radius:4px;box-shadow:0 20px 80px #000}}
+/* HERO: texts appear slowly, top to bottom, after the letter is opened */
+.hero>:not(.glow){opacity:0;transform:translateY(-20px)}
+.hero.go>:not(.glow){opacity:1;transform:none;transition:opacity .85s ease,transform .85s ease;transition-delay:calc(var(--i)*.48s + .3s)}
+.hero .invite{opacity:1;transform:none}
+.hero.go .invite{transition:none}
+.invite .ch{opacity:0;transition:opacity .5s ease}
+.invite .ch.on{opacity:1}
+
+/* COVER AS A LETTER (maktub) */
+.cover:before{display:none}
+.paper{position:relative;width:min(80vw,340px);padding:44px 24px 58px;text-align:center;color:#4a3716;
+ background:radial-gradient(ellipse at 28% 18%,#fcf6e4 0,#f0e3c3 62%,#e2d1a8 100%);
+ box-shadow:0 30px 80px #000d,0 0 0 1px #c9a55a55,inset 0 0 46px #b8985040;
+ transform:rotate(-1.2deg);animation:paperFloat 5s ease-in-out infinite;transition:transform 1s ease,opacity 1s ease}
+.paper:before{content:"";position:absolute;inset:10px;border:1px solid #b8923f99;pointer-events:none}
+.paper:after{content:"";position:absolute;inset:15px;border:1px solid #b8923f40;pointer-events:none}
+@keyframes paperFloat{50%{transform:translateY(-6px) rotate(-1.2deg)}}
+.cover.hide .paper{animation:none;transform:translateY(-40px) scale(1.06) rotate(0);opacity:0}
+.p-top{font:italic 18px 'Cormorant Garamond',serif;color:#7a5b1f;margin-bottom:16px}
+.p-mono{font:italic 26px 'Cormorant Garamond',serif;color:#9a7428;margin-bottom:18px}
+.p-names{font:400 clamp(38px,11vw,46px)/1.05 'Great Vibes','Cormorant Garamond',cursive;color:#3a2a0c}
+.p-names span{display:block;font-size:.6em;color:#9a7428;margin:4px 0}
+.p-line{width:70px;height:1px;background:linear-gradient(90deg,transparent,#9a7428,transparent);margin:22px auto 16px}
+.p-small{font:italic 17px 'Cormorant Garamond',serif;color:#6b4f1a}
+.seal{position:absolute;left:50%;bottom:-28px;transform:translateX(-50%);width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+ font:italic 22px 'Cormorant Garamond',serif;color:#3a2a0c;
+ background:radial-gradient(circle at 35% 30%,#f4dfaa,#d8b66b 55%,#9a7428);box-shadow:0 6px 16px #0008,inset 0 0 0 3px #ffffff22,inset 0 0 0 5px #8a6a2866}
+.cover .tap{margin-top:54px}
+</style>
+</head>
+<body class="locked">
+
+<div class="cover" id="cover">
+  <div class="paper">
+    <div class="p-top">Hurmatli mehmon</div>
+    <div class="p-mono">Sh &amp; Sh</div>
+    <div class="p-names">Shahzodbek<span>&amp;</span>Shahnozaxon</div>
+    <div class="p-line"></div>
+    <div class="p-small">To‘y marosimiga taklifnoma</div>
+    <div class="seal">Sh</div>
+  </div>
+  <div class="tap">Ochish uchun bosing</div>
+</div>
+
+<main class="page">
+  <div class="hero">
+    <div class="glow"></div>
+    <div class="eyebrow">Xush kelibsiz</div>
+    <div class="monogram">Sh &amp; Sh</div>
+    <div class="eyebrow" style="margin-bottom:18px">To‘y marosimiga</div>
+    <h1>Shahzodbek<span class="amp">&amp;</span>Shahnozaxon</h1>
+    <div class="rule"></div>
+    <div class="invite">Hayotimizning eng go‘zal sahifasini birgalikda boshlayotgan kunimizda Sizni yonimizda ko‘rishdan mamnun bo‘lamiz.</div>
+    <div class="scroll">PASTGA SURING ↓</div>
+  </div>
+
+  <section class="reveal">
+    <div class="kicker">Sana</div>
+    <h2>Baxtli kunimiz</h2>
+    <p class="hint">✦ Sanani ko‘rish uchun kvadratlarni ishqalang ✦</p>
+    <div class="scratch-row">
+      <div class="tile"><div class="val">07<small>KUN</small></div><canvas></canvas></div>
+      <div class="tile"><div class="val">DEKABR<small>OY</small></div><canvas></canvas></div>
+      <div class="tile"><div class="val">2026<small>YIL</small></div><canvas></canvas></div>
+    </div>
+    <div class="weekday">DUSHANBA • SOAT 16:00</div>
+  </section>
+
+  <section class="reveal">
+    <div class="bismillah">Bismillohir Rohmanir Rohiym</div>
+    <div class="kicker">Sizni taklif etamiz</div>
+    <h2>To‘y marosimiga</h2>
+    <div class="names">
+      <div class="role">Kuyov</div>
+      <h3>Shahzodbek</h3>
+      <div class="and">va</div>
+      <div class="role">Kelin</div>
+      <h3>Shahnozaxon</h3>
+    </div>
+    <p class="copy">Aziz do‘stlar va yaqinlar! Umr yo‘limiz boshlanayotgan ushbu kunda quvonch, duo va unutilmas xotiralarni siz aziz mehmonlar bilan baham ko‘rishni istaymiz.</p>
+  </section>
+
+  <section class="reveal">
+    <div class="kicker">Tantana dasturi</div>
+    <h2>Marosim boshlanishi</h2>
+    <div class="prog">
+      <div class="row"><span class="t">16:00</span><span class="d">Tantana boshlanishi</span></div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="kicker">Tantanagacha qolgan vaqt</div>
+    <h2>Baxtli kunimizga</h2>
+    <div class="countdown" aria-label="To‘y boshlanishigacha qolgan vaqt">
+      <div class="unit"><b id="days">00</b><span>KUN</span></div>
+      <div class="unit"><b id="hours">00</b><span>SOAT</span></div>
+      <div class="unit"><b id="mins">00</b><span>DAQIQA</span></div>
+      <div class="unit"><b id="secs">00</b><span>SONIYA</span></div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="kicker">Manzil</div>
+    <h2>Marosim manzili</h2>
+    <div class="event-card">
+      <div class="star">✦ ✧ ✦</div>
+      <div class="venue">Grand Royal Hall</div>
+      <p>Jizzax viloyati<br>G‘allaorol tumani</p>
+      <div class="rule"></div>
+      <p><strong style="color:#e5cc91">7-dekabr 2026 • 16:00</strong></p>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Grand+Royal+Hall+G%27allaorol+Jizzax">Xaritada ochish ↗</a>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="kicker">Hurmat bilan</div>
+    <h2>Sizni kutamiz!</h2>
+    <p class="copy">Sizlar bilan ushbu baxtli kunni nishonlashni intiqlik bilan kutamiz.</p>
+    <div class="star">✦ ✧ ✦</div>
+    <div style="font:italic 27px 'Cormorant Garamond',serif;color:#e7cb8e">Shahzodbek &amp; Shahnozaxon</div>
+  </section>
+  <footer>Sh &amp; Sh</footer>
+</main>
+
+<audio id="song" src="yoningdaman.mp3" preload="auto" loop></audio>
+<button class="music" id="musicBtn" type="button"><span>♫</span> MUSIQANI YOQISH</button>
+
+<script>
+/* Countdown (Uzbekistan time, UTC+5) */
+const target=new Date('2026-12-07T16:00:00+05:00').getTime();
+function tick(){
+ const diff=Math.max(0,target-Date.now());
+ const d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);
+ const set=(id,v)=>document.getElementById(id).textContent=String(v).padStart(2,'0');
+ set('days',d);set('hours',h);set('mins',m);set('secs',s);
+}
+tick();setInterval(tick,1000);
+
+/* Scratch tiles */
+function makeScratch(canvas){
+ const tile=canvas.parentElement;
+ const dpr=window.devicePixelRatio||1;
+ const w=tile.clientWidth,h=tile.clientHeight;
+ canvas.width=w*dpr;canvas.height=h*dpr;
+ const c=canvas.getContext('2d');
+ c.scale(dpr,dpr);
+ const g=c.createLinearGradient(0,0,w,h);
+ g.addColorStop(0,'#8c6a2b');g.addColorStop(.5,'#e9cf8f');g.addColorStop(1,'#a07a35');
+ c.fillStyle=g;c.fillRect(0,0,w,h);
+ c.fillStyle='rgba(60,40,10,.55)';c.font='16px serif';c.textAlign='center';c.textBaseline='middle';
+ c.fillText('✦',w/2,h/2);
+ let drawing=false;
+ function pos(e){const r=canvas.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]}
+ function scratch(e){
+  if(!drawing)return;
+  const[x,y]=pos(e);
+  c.globalCompositeOperation='destination-out';
+  c.beginPath();c.arc(x,y,16,0,Math.PI*2);c.fill();
+ }
+ function progress(){
+  const d=c.getImageData(0,0,canvas.width,canvas.height).data;
+  let clear=0,total=0;
+  for(let i=3;i<d.length;i+=64){total++;if(d[i]===0)clear++}
+  if(clear/total>.45)canvas.classList.add('done');
+ }
+ canvas.addEventListener('pointerdown',e=>{drawing=true;canvas.setPointerCapture(e.pointerId);scratch(e)});
+ canvas.addEventListener('pointermove',scratch);
+ const end=()=>{if(!drawing)return;drawing=false;progress()};
+ canvas.addEventListener('pointerup',end);
+ canvas.addEventListener('pointercancel',end);
+}
+function initScratch(){document.querySelectorAll('.tile canvas').forEach(makeScratch)}
+window.addEventListener('load',initScratch);
+
+/* Scroll reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* Music (synthesized, no external song) */
+let ctx=null,playing=false,timer=null,noteIndex=0,master=null;
+const notes=[261.63,329.63,392.00,329.63,293.66,349.23,440.00,349.23,261.63,329.63,392.00,523.25,440.00,392.00,329.63,293.66];
+function playNote(){
+ if(!playing||!ctx)return;
+ const now=ctx.currentTime,freq=notes[noteIndex%notes.length];
+ const osc=ctx.createOscillator(),gain=ctx.createGain();
+ osc.type='sine';osc.frequency.setValueAtTime(freq,now);
+ gain.gain.setValueAtTime(0,now);gain.gain.linearRampToValueAtTime(.055,now+.18);gain.gain.exponentialRampToValueAtTime(.001,now+1.25);
+ osc.connect(gain);gain.connect(master);osc.start(now);osc.stop(now+1.3);
+ noteIndex++;
+}
+const btn=document.getElementById('musicBtn');
+const song=document.getElementById('song');
+let songOk=null; // null = unknown, true = mp3 works, false = use synth fallback
+const ON='<span>♫</span> MUSIQANI O‘CHIRISH',OFF='<span>♫</span> MUSIQANI YOQISH';
+async function toggleMusic(force){
+ playing=typeof force==='boolean'?force:!playing;
+ if(!playing){song.pause();clearInterval(timer);btn.innerHTML=OFF;return}
+ // 1) try the mp3 (yoningdaman.mp3 next to this file)
+ if(songOk!==false){
+  try{await song.play();songOk=true;btn.innerHTML=ON;return}
+  catch(e){songOk=false}
+ }
+ // 2) fallback: soft synthesized tones
+ if(!ctx){ctx=new (window.AudioContext||window.webkitAudioContext)();master=ctx.createGain();master.gain.value=.55;master.connect(ctx.destination)}
+ if(ctx.state==='suspended')await ctx.resume();
+ playNote();clearInterval(timer);timer=setInterval(playNote,650);btn.innerHTML=ON;
+}
+btn.addEventListener('click',()=>toggleMusic());
+
+/* Cover */
+/* Hero sequence: order top -> bottom, invite text is "written" letter by letter */
+const hero=document.querySelector('.hero');
+const heroItems=[...hero.children].filter(el=>!el.classList.contains('glow'));
+heroItems.forEach((el,i)=>el.style.setProperty('--i',i));
+const inviteEl=hero.querySelector('.invite');
+const inviteText=inviteEl.textContent;
+inviteEl.innerHTML=[...inviteText].map(c=>'<span class="ch">'+c+'</span>').join('');
+function startHero(){
+ hero.classList.add('go');
+ const spans=inviteEl.querySelectorAll('.ch');
+ const startAt=(heroItems.indexOf(inviteEl)*0.48+0.3)*1000;
+ setTimeout(()=>{
+  let k=0;
+  const t=setInterval(()=>{ if(k>=spans.length){clearInterval(t);return} spans[k++].classList.add('on') },22);
+ },startAt);
+}
+document.getElementById('cover').addEventListener('click',function(){
+ this.classList.add('hide');
+ document.body.classList.remove('locked');
+ window.scrollTo(0,0);
+ startHero();
+ toggleMusic(true).catch(()=>{});
+});
+</script>
+</body>
+</html>
